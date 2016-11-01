@@ -1,7 +1,8 @@
 .header {
-  background: #eee url('../../header-bk.png') center;
+  background: #eee url('../../header-bk.png') top;
   background-size: cover;
   border-bottom: 1px solid #ccc;
+  height: 600px;
 }
 
 .content {
