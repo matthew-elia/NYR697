@@ -1,0 +1,46 @@
+.navbar {
+  background: #FFF;
+  background-size: cover;
+  border-bottom: 1px solid #ccc;
+  height: 60px;
+}
+
+.content {
+  width: 100%;
+  max-width: 980px;
+  margin: auto;
+  overflow: auto;
+}
+
+.site-title {
+  font-weight: 300;
+  font-size: 42px;
+  float: left;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: #000;
+}
+
+.sign-in-button, .add-post-button {
+  display: inline-block;
+  color: #FFF;
+  background: #03A9F4;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 1000px;
+  float: right;
+  margin-top: 8px;
+}
+
+.selected {
+  border-bottom: 1px solid #fff;
+}
+
+@media (max-width: 767px){
+  .sign-in-button{
+    float: left;
+    margin-top: 16px;
+  }
+}

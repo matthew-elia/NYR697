@@ -7,6 +7,7 @@ import styles from './App.css';
 // Import Components
 import Helmet from 'react-helmet';
 import DevTools from './components/DevTools';
+import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
@@ -48,10 +49,13 @@ export class App extends Component {
               },
             ]}
           />
+          <Navbar 
+          toggleAddPost={this.toggleAddPostSection}
+          // toggleSignInUser={this.toggleSignInUserSection}
+          />
           <Header
             switchLanguage={lang => this.props.dispatch(switchLanguage(lang))}
-            intl={this.props.intl}
-            toggleAddPost={this.toggleAddPostSection}
+            intl={this.props.intl}  
           />
           <div className={styles.container}>
             {this.props.children}

@@ -21,14 +21,11 @@ export function Header(props, context) {
         </div>
       */}
       <div className={styles.content}>
+       {/*
         <h1 className={styles['site-title']}>
           <Link to="/" ><FormattedMessage id="siteTitle" /></Link>
         </h1>
-        {
-          context.router.isActive('/', true)
-            ? <a className={styles['add-post-button']} href="#" onClick={props.toggleAddPost}><FormattedMessage id="addPost" /></a>
-            : null
-        }
+        */}
       </div>
     </div>
   );

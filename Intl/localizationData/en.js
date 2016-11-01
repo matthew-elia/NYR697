@@ -1,8 +1,7 @@
 export default {
   locale: 'en',
   messages: {
-    siteTitle: `69 hours a day, \n
-                7 days a year.`,
+    siteTitle: `Rangers 69/7`,
     addPost: 'Add Post',
     switchLanguage: 'Switch Language',
     twitterMessage: 'We are on Twitter',
