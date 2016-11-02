@@ -18,7 +18,7 @@ export function Navbar(props, context) {
           : null
         }
         {
-          context.router.isActive('/admin', true)
+          context.router.isActive('/', true)
           ? <a className={styles['add-post-button']} href="#" onClick={props.toggleAddPost}>Add Post</a>
           : null
         }
