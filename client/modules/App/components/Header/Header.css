@@ -3,6 +3,7 @@
   background-size: cover;
   border-bottom: 1px solid #ccc;
   height: 600px;
+  display: none;
 }
 
 .content {
