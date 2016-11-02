@@ -5,6 +5,8 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import IntlWrapper from '../client/modules/Intl/IntlWrapper';
 
+import passport from 'passport';
+
 // Webpack Requirements
 import webpack from 'webpack';
 import config from '../webpack.config.dev';
@@ -143,6 +145,12 @@ app.use((req, res, next) => {
 app.listen(serverConfig.port, (error) => {
   if (!error) {
     console.log(`MERN is running on port: ${serverConfig.port}! Build something amazing!`); // eslint-disable-line
+
+    app.post('/login', 
+      passport.authenticate('local', { failureRedirect: '/login' }),
+      function(req, res) {
+        res.redirect('/');
+      });
   }
 });
 

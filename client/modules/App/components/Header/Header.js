@@ -21,11 +21,10 @@ export function Header(props, context) {
         </div>
       */}
       <div className={styles.content}>
-       {/*
-        <h1 className={styles['site-title']}>
-          <Link to="/" ><FormattedMessage id="siteTitle" /></Link>
-        </h1>
-        */}
+        <div style={{textAlign:'right'}}>
+          <h1 style={{color:'white', fontSize:'72px'}}>69 hours a day,<br/>
+              7 days a year.</h1>
+        </div>
       </div>
     </div>
   );
