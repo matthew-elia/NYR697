@@ -1,8 +1,8 @@
 .navbar {
-  background: #FFF;
+  background: #eee url('../../header-bk.png') top;
   background-size: cover;
   border-bottom: 1px solid #ccc;
-  height: 60px;
+  height: 600px;
 }
 
 .content {
@@ -20,10 +20,10 @@
 
 .site-title a {
   text-decoration: none;
-  color: #000;
+  color: #FFF;
 }
 
-.sign-in-button, .add-post-button {
+.log-in-button, .add-post-button {
   display: inline-block;
   color: #FFF;
   background: #03A9F4;
@@ -39,7 +39,7 @@
 }
 
 @media (max-width: 767px){
-  .sign-in-button{
+  .log-in-button{
     float: left;
     margin-top: 16px;
   }

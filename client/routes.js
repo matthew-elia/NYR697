@@ -39,5 +39,13 @@ export default (
         });
       }}
     />
+    <Route
+      path="/login"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Login/Login').default);
+        });
+      }}
+    />
   </Route>
 );

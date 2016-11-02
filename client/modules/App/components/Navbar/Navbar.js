@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import { FormattedMessage } from 'react-intl';
 
 // Import Style
 import styles from './Navbar.css';
@@ -11,16 +10,16 @@ export function Navbar(props, context) {
     <div className={styles.navbar}>
       <div className={styles.content}>
         <h1 className={styles['site-title']}>
-          <Link to="/" ><FormattedMessage id="siteTitle" /></Link>
+          <Link to="/" >69/7</Link>
         </h1>
         {
           context.router.isActive('/', true)
-            ? <a className={styles['sign-in-button']} href="#" onClick={props.signInUser}><FormattedMessage id="Sign In" /></a>
-            : null
+          ? <Link to="/login" ><a className={styles['log-in-button']} onClick={props.toggleLogIn}>Log In</a></Link>
+          : null
         }
         {
-          context.router.isActive('/', true)
-          ? <a className={styles['add-post-button']} href="#" onClick={props.toggleAddPost}><FormattedMessage id="addPost" /></a>
+          context.router.isActive('/admin', true)
+          ? <a className={styles['add-post-button']} href="#" onClick={props.toggleAddPost}>Add Post</a>
           : null
         }
       </div>
@@ -34,6 +33,7 @@ Navbar.contextTypes = {
 
 Navbar.propTypes = {
   toggleAddPost: PropTypes.func.isRequired,
+  toggleLogIn: PropTypes.func.isRequired,
   switchLanguage: PropTypes.func.isRequired,
   intl: PropTypes.object.isRequired,
 };

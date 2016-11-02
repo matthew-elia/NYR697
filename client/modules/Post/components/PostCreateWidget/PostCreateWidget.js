@@ -5,6 +5,7 @@ import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import styles from './PostCreateWidget.css';
 
 export class PostCreateWidget extends Component {
+  
   addPost = () => {
     const nameRef = this.refs.name;
     const titleRef = this.refs.title;

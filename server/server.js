@@ -58,6 +58,8 @@ app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../dist')));
 app.use('/api', posts);
+// app.use('/api', users);
+// app.use('/api/login', login);
 
 // Render Initial HTML
 const renderFullPage = (html, initialState) => {
@@ -145,12 +147,6 @@ app.use((req, res, next) => {
 app.listen(serverConfig.port, (error) => {
   if (!error) {
     console.log(`MERN is running on port: ${serverConfig.port}! Build something amazing!`); // eslint-disable-line
-
-    app.post('/login', 
-      passport.authenticate('local', { failureRedirect: '/login' }),
-      function(req, res) {
-        res.redirect('/');
-      });
   }
 });
 

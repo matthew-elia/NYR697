@@ -12,11 +12,12 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 // Import Actions
-import { toggleAddPost } from './AppActions';
+import { toggleAddPost, toggleLogIn } from './AppActions';
 import { switchLanguage } from '../../modules/Intl/IntlActions';
 
 export class App extends Component {
-  constructor(props) {
+  constructor(props, context) {
+    console.log(context);
     super(props);
     this.state = { isMounted: false };
   }
@@ -27,6 +28,10 @@ export class App extends Component {
 
   toggleAddPostSection = () => {
     this.props.dispatch(toggleAddPost());
+  };
+
+  toggleLogInSection = () => {
+    this.props.dispatch(toggleLogIn());
   };
 
   render() {
@@ -51,12 +56,13 @@ export class App extends Component {
           />
           <Navbar 
           toggleAddPost={this.toggleAddPostSection}
-          // toggleSignInUser={this.toggleSignInUserSection}
+          toggleLogIn={this.toggleLogInSection}
           />
-          <Header
-            switchLanguage={lang => this.props.dispatch(switchLanguage(lang))}
-            intl={this.props.intl}  
-          />
+          <div className={styles.header}>
+            <Header
+              switchLanguage={lang => this.props.dispatch(switchLanguage(lang))}
+              intl={this.props.intl}  /> 
+          </div>
           <div className={styles.container}>
             {this.props.children}
           </div>
